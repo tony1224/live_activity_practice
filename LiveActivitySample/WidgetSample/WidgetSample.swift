@@ -53,11 +53,45 @@ struct WidgetSample: Widget {
     let kind: String = "WidgetSample"
 
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
-            WidgetSampleEntryView(entry: entry)
+        ActivityConfiguration(for: TripAppAttributes.self) { context in
+            LiveActivitiesTestWidgetEntryView(attribute: context.attributes, state: context.state)
+        } dynamicIsland: { context in
+            // Todo
+            DynamicIsland {
+                // 左上(ごく短いテキスト)
+                DynamicIslandExpandedRegion(.leading) {
+                    Text("🚀")
+                }
+                // 右上(ごく短いテキスト)
+                DynamicIslandExpandedRegion(.trailing) {
+                    Text(context.state.arrivalTime, style: .timer)
+                        .font(.caption2)
+                }
+                // 中央(一文程度のテキスト, スコアボード
+                DynamicIslandExpandedRegion(.center) {
+                    Text("次の目的地は\(context.attributes.userStopPlanetName)です。")
+                }
+                // 下(ボタン配置くらい)
+                DynamicIslandExpandedRegion(.bottom) {
+                    Button("宇宙機アクセスバッジ") {
+                        return
+                    }.buttonStyle(.borderedProminent)
+                }
+            } compactLeading: {
+                // コンパクト版(左)
+                Text("🚀 - \(context.attributes.shipNumber)")
+            } compactTrailing: {
+                // コンパクト版(右)
+                Text(context.state.arrivalTime, style: .relative)
+                    .frame(width: 50)
+                    .monospacedDigit()
+                    .font(.caption2)
+            } minimal: {
+                // 2つ以上のウィジェットが開いている場合はこれが表示される
+                Text("🚀")
+            }
+            
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
     }
 }
 

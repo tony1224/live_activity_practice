@@ -14,10 +14,12 @@
 		FB31090829065EDC00668329 /* WidgetSample.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = FB31090429065EDA00668329 /* WidgetSample.intentdefinition */; };
 		FB31090929065EDC00668329 /* WidgetSample.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = FB31090429065EDA00668329 /* WidgetSample.intentdefinition */; };
 		FB31090C29065EDC00668329 /* WidgetSampleExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FB3108FB29065EDA00668329 /* WidgetSampleExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FB31091229065F3500668329 /* TripAppAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB31091129065F3500668329 /* TripAppAttributes.swift */; };
 		FBA735A2290647CC00FF252E /* LiveActivitySampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA735A1290647CC00FF252E /* LiveActivitySampleApp.swift */; };
 		FBA735A4290647CC00FF252E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA735A3290647CC00FF252E /* ContentView.swift */; };
 		FBA735A6290647CD00FF252E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBA735A5290647CD00FF252E /* Assets.xcassets */; };
 		FBA735AA290647CD00FF252E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBA735A9290647CD00FF252E /* Preview Assets.xcassets */; };
+		FBCF5E2B29066C7600B30E77 /* LiveActivitiesTestWidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCF5E2A29066C7600B30E77 /* LiveActivitiesTestWidgetEntryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,12 +55,14 @@
 		FB31090429065EDA00668329 /* WidgetSample.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = WidgetSample.intentdefinition; sourceTree = "<group>"; };
 		FB31090529065EDC00668329 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB31090729065EDC00668329 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB31091129065F3500668329 /* TripAppAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripAppAttributes.swift; sourceTree = "<group>"; };
 		FBA7359E290647CC00FF252E /* LiveActivitySample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveActivitySample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA735A1290647CC00FF252E /* LiveActivitySampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivitySampleApp.swift; sourceTree = "<group>"; };
 		FBA735A3290647CC00FF252E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FBA735A5290647CD00FF252E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBA735A7290647CD00FF252E /* LiveActivitySample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LiveActivitySample.entitlements; sourceTree = "<group>"; };
 		FBA735A9290647CD00FF252E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FBCF5E2A29066C7600B30E77 /* LiveActivitiesTestWidgetEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivitiesTestWidgetEntryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 				FB31090429065EDA00668329 /* WidgetSample.intentdefinition */,
 				FB31090529065EDC00668329 /* Assets.xcassets */,
 				FB31090729065EDC00668329 /* Info.plist */,
+				FB31091129065F3500668329 /* TripAppAttributes.swift */,
+				FBCF5E2A29066C7600B30E77 /* LiveActivitiesTestWidgetEntryView.swift */,
 			);
 			path = WidgetSample;
 			sourceTree = "<group>";
@@ -242,8 +248,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBCF5E2B29066C7600B30E77 /* LiveActivitiesTestWidgetEntryView.swift in Sources */,
 				FB31090829065EDC00668329 /* WidgetSample.intentdefinition in Sources */,
 				FB31090329065EDA00668329 /* WidgetSample.swift in Sources */,
+				FB31091229065F3500668329 /* TripAppAttributes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +287,7 @@
 				INFOPLIST_FILE = WidgetSample/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WidgetSample;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +315,7 @@
 				INFOPLIST_FILE = WidgetSample/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WidgetSample;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -375,6 +383,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -427,6 +436,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
