@@ -69,7 +69,7 @@ struct WidgetSample: Widget {
                 }
                 // 中央(一文程度のテキスト, スコアボード
                 DynamicIslandExpandedRegion(.center) {
-                    Text("次の目的地は\(context.attributes.userStopPlanetName)です。")
+                    Text("次の目的地は\(context.state.userStopPlanetName)です。")
                 }
                 // 下(ボタン配置くらい)
                 DynamicIslandExpandedRegion(.bottom) {

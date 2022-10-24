@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import Intents
+import ActivityKit
+import WidgetKit
 
 struct LiveActivitiesTestWidgetEntryView: View {
     @State var attribute: TripAppAttributes
@@ -21,7 +24,7 @@ struct LiveActivitiesTestWidgetEntryView: View {
             HStack {
                 Label("Your stop", systemImage: "lanyardcard")
                 Spacer()
-                Text(attribute.userStopPlanetName)
+                Text(state.userStopPlanetName)
             }
             
             switch TripAppAttributes.TripStatus(rawValue: state.tripStatus) {
@@ -29,7 +32,7 @@ struct LiveActivitiesTestWidgetEntryView: View {
                 HStack {
                     Label("Your cabin", systemImage: "person.fill")
                     Spacer()
-                    Text(attribute.userCabinNumber)
+                    Text(state.userCabinNumber)
                         .font(.title3.bold())
                 }
             case .inflight:

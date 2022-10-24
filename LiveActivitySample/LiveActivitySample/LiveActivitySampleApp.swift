@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WidgetSampleExtension
 
 @main
 struct LiveActivitySampleApp: App {
