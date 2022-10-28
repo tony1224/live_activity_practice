@@ -4,54 +4,69 @@
 //
 //  Created by Jun Morita on 2022/10/29.
 //
-
+#if canImport(ActivityKit)
 import ActivityKit
 import WidgetKit
 import SwiftUI
 
-struct widget_sampleAttributes: ActivityAttributes {
-    public struct ContentState: Codable, Hashable {
-        // Dynamic stateful properties about your activity go here!
-        var value: Int
+struct TripAppAttributes: ActivityAttributes {
+
+    enum TripStatus: String {
+        case predeparture
+        case inflight
+        case landed
     }
 
-    // Fixed non-changing properties about your activity go here!
-    var name: String
+    public struct ContentState: Codable, Hashable {
+        var tripStatus: String
+        var userStopPlanetName: String
+        var userCabinNumber: String
+        var arrivalTime: Date
+    }
+    
+    var shipNumber: String
+    var departureTime: Date
+    
 }
 
 struct widget_sampleLiveActivity: Widget {
     var body: some WidgetConfiguration {
-        ActivityConfiguration(for: widget_sampleAttributes.self) { context in
-            // Lock screen/banner UI goes here
-            VStack {
-                Text("Hello")
-            }
-            .activityBackgroundTint(Color.cyan)
-            .activitySystemActionForegroundColor(Color.black)
-            
+        ActivityConfiguration(for: TripAppAttributes.self) { context in
+            LiveActivitiesTestWidgetEntryView(
+                attribute: context.attributes,
+                state: context.state
+            )
         } dynamicIsland: { context in
             DynamicIsland {
-                // Expanded UI goes here.  Compose the expanded UI through
-                // various regions, like leading/trailing/center/bottom
                 DynamicIslandExpandedRegion(.leading) {
-                    Text("Leading")
+                    Text("🚀")
                 }
                 DynamicIslandExpandedRegion(.trailing) {
-                    Text("Trailing")
+                    Text(context.state.arrivalTime, style: .timer)
+                        .font(.caption2)
+                }
+                DynamicIslandExpandedRegion(.center) {
+                    Text("次の目的地は\(context.state.userStopPlanetName)です。")
                 }
                 DynamicIslandExpandedRegion(.bottom) {
-                    Text("Bottom")
-                    // more content
+                    Button("宇宙機アクセスバッジ") {
+                        return
+                    }.buttonStyle(.borderedProminent)
                 }
             } compactLeading: {
-                Text("L")
+                Text("🚀 - \(context.attributes.shipNumber)")
             } compactTrailing: {
-                Text("T")
+                Text(context.state.arrivalTime, style: .relative)
+                                    .frame(width: 50)
+                                    .monospacedDigit()
+                                    .font(.caption2)
             } minimal: {
-                Text("Min")
+                ViewThatFits {
+                    Text("🚀")
+                    Text("context.state.arrivalTime, style: .relative")
+                }
             }
-            .widgetURL(URL(string: "http://www.apple.com"))
-            .keylineTint(Color.red)
         }
     }
 }
+#endif
