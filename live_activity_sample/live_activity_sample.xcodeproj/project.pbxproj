@@ -21,6 +21,8 @@
 		FBCF5E60290C3A8C00B30E77 /* widget_sample.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = FBCF5E5B290C3A8A00B30E77 /* widget_sample.intentdefinition */; };
 		FBCF5E63290C3A8C00B30E77 /* widget_sampleExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FBCF5E4E290C3A8A00B30E77 /* widget_sampleExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FBCF5E6D290C3DB000B30E77 /* LiveActivitiesTestWidgetEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCF5E6C290C3DB000B30E77 /* LiveActivitiesTestWidgetEntryView.swift */; };
+		FBCF5E6F290C410900B30E77 /* TripAppAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCF5E6E290C410900B30E77 /* TripAppAttributes.swift */; };
+		FBCF5E70290C410900B30E77 /* TripAppAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCF5E6E290C410900B30E77 /* TripAppAttributes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,7 @@
 		FBCF5E5E290C3A8C00B30E77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBCF5E68290C3AAC00B30E77 /* live-activity-sample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "live-activity-sample-Info.plist"; sourceTree = SOURCE_ROOT; };
 		FBCF5E6C290C3DB000B30E77 /* LiveActivitiesTestWidgetEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivitiesTestWidgetEntryView.swift; sourceTree = "<group>"; };
+		FBCF5E6E290C410900B30E77 /* TripAppAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripAppAttributes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +149,7 @@
 				FBCF5E5C290C3A8C00B30E77 /* Assets.xcassets */,
 				FBCF5E5E290C3A8C00B30E77 /* Info.plist */,
 				FBCF5E6C290C3DB000B30E77 /* LiveActivitiesTestWidgetEntryView.swift */,
+				FBCF5E6E290C410900B30E77 /* TripAppAttributes.swift */,
 			);
 			path = widget_sample;
 			sourceTree = "<group>";
@@ -252,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBCF5E3E290C38AF00B30E77 /* ContentView.swift in Sources */,
+				FBCF5E6F290C410900B30E77 /* TripAppAttributes.swift in Sources */,
 				FBCF5E60290C3A8C00B30E77 /* widget_sample.intentdefinition in Sources */,
 				FBCF5E3C290C38AF00B30E77 /* live_activity_sampleApp.swift in Sources */,
 			);
@@ -266,6 +271,7 @@
 				FBCF5E6D290C3DB000B30E77 /* LiveActivitiesTestWidgetEntryView.swift in Sources */,
 				FBCF5E56290C3A8A00B30E77 /* widget_sampleBundle.swift in Sources */,
 				FBCF5E5A290C3A8A00B30E77 /* widget_sample.swift in Sources */,
+				FBCF5E70290C410900B30E77 /* TripAppAttributes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

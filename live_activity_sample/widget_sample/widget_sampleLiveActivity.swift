@@ -9,26 +9,6 @@ import ActivityKit
 import WidgetKit
 import SwiftUI
 
-struct TripAppAttributes: ActivityAttributes {
-
-    enum TripStatus: String {
-        case predeparture
-        case inflight
-        case landed
-    }
-
-    public struct ContentState: Codable, Hashable {
-        var tripStatus: String
-        var userStopPlanetName: String
-        var userCabinNumber: String
-        var arrivalTime: Date
-    }
-    
-    var shipNumber: String
-    var departureTime: Date
-    
-}
-
 struct widget_sampleLiveActivity: Widget {
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: TripAppAttributes.self) { context in
